@@ -33,6 +33,7 @@ class QuizViewController: UIViewController {
     var quizCount = 0
     var correctCount = 0
     var selectLebel = 0
+    var selectQuiz = 0
     var player:AVAudioPlayer!
     var image_no :Int = 0
     var continuity = 1
