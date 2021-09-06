@@ -16,7 +16,6 @@ class ScoreViewController: UIViewController {
    
     var correct = 0
 
-    //正解数を表示
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,14 +34,13 @@ class ScoreViewController: UIViewController {
     }
     
     
-    //シェア機能
+    //シェアボタン
     @IBAction func shareButtonAction(_ sender: Any) {
-        let activityItems = ["\(correct)問正解しました!","#クイズアプリ"]
+        let activityItems = ["\(correct)問正解しました!","#ピアノクイズアプリ","#クイズアプリ","https://apps.apple.com/us/app/%E3%83%94%E3%82%A2%E3%83%8E%E3%82%AF%E3%82%A4%E3%82%BA/id1583394892?itsct=apps_box_link&itscg=30200"]
         let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
         self.present(activityVC, animated: true)
     }
     
-    //トップに戻る
     @IBAction func toTopButtonAction(_ sender: Any) {
         self.presentingViewController?.presentingViewController?.presentingViewController?.dismiss(animated: true)
     }
