@@ -12,7 +12,7 @@ import GoogleMobileAds
 class QuizViewController: UIViewController {
     @IBOutlet weak var quizNumberLabel: UILabel!
     @IBOutlet weak var quizTextView: UIImageView!
-    @IBOutlet weak var answerButton1: UIButton! //鍵盤
+    @IBOutlet weak var answerButton1: UIButton! //鍵盤ボタン
     @IBOutlet weak var answerButton2: UIButton!
     @IBOutlet weak var answerButton3: UIButton!
     @IBOutlet weak var answerButton4: UIButton!
@@ -26,6 +26,10 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var answerButton12: UIButton!
     @IBOutlet weak var judgeImageView: UIImageView!
     @IBOutlet weak var answerImage: UIImageView!
+    
+    @IBAction func backButtonAction(_ sender:Any) {
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true)
+    }
     
     var bannerView: GADBannerView!
     var csvArray: [String] = []
@@ -65,7 +69,38 @@ class QuizViewController: UIViewController {
     var score19 :UIImage = UIImage(named:"ab")!
     var score20 :UIImage = UIImage(named:"hb")!
     var score21 :UIImage = UIImage(named:"cb")!
-    var image1 :UIImage = UIImage(named:"do")!
+    var score22 :UIImage = UIImage(named:"lv2c")!
+    var score23 :UIImage = UIImage(named:"lv2d")!
+    var score24 :UIImage = UIImage(named:"lv2e")!
+    var score25 :UIImage = UIImage(named:"lv2f")!
+    var score26 :UIImage = UIImage(named:"lv2g")!
+    var score27 :UIImage = UIImage(named:"lv2a")!
+    var score28 :UIImage = UIImage(named:"lv2h")!
+    var score29 :UIImage = UIImage(named:"lv3c")!
+    var score30 :UIImage = UIImage(named:"lv3d")!
+    var score31 :UIImage = UIImage(named:"lv3e")!
+    var score32 :UIImage = UIImage(named:"lv3f")!
+    var score33 :UIImage = UIImage(named:"lv3g")!
+    var score34 :UIImage = UIImage(named:"lv3a")!
+    var score35 :UIImage = UIImage(named:"lv3h")!
+    var score36 :UIImage = UIImage(named:"c8")!
+    var score37 :UIImage = UIImage(named:"d8")!
+    var score38 :UIImage = UIImage(named:"e8")!
+    var score39 :UIImage = UIImage(named:"f8")!
+    var score40 :UIImage = UIImage(named:"g8")!
+    var score41 :UIImage = UIImage(named:"a8")!
+    var score42 :UIImage = UIImage(named:"h8")!
+    var score43 :UIImage = UIImage(named:"c82")!
+    var score44 :UIImage = UIImage(named:"lv2c82")!
+    var score45 :UIImage = UIImage(named:"lv2d8")!
+    var score46 :UIImage = UIImage(named:"lv2e8")!
+    var score47 :UIImage = UIImage(named:"lv2f8")!
+    var score48 :UIImage = UIImage(named:"lv2g8")!
+    var score49 :UIImage = UIImage(named:"lv2a8")!
+    var score50 :UIImage = UIImage(named:"lv2h8")!
+    var score51 :UIImage = UIImage(named:"lv28c")!
+    
+    var image1 :UIImage = UIImage(named:"do")! //正解画像
     var image2 :UIImage = UIImage(named:"re")!
     var image3 :UIImage = UIImage(named:"mi")!
     var image4 :UIImage = UIImage(named:"fa")!
@@ -86,6 +121,7 @@ class QuizViewController: UIViewController {
     var image19 :UIImage = UIImage(named:"rab")!
     var image20 :UIImage = UIImage(named:"sib")!
     var image21 :UIImage = UIImage(named:"dob")!
+    
    
     
     var imgArray:[UIImage] = []
@@ -119,7 +155,7 @@ class QuizViewController: UIViewController {
         print("復習モード\(review_continue)")
         
         //問題画像の配列
-        imgArray = [score1,score2,score3,score4,score5,score6,score7,score8,score9,score10,score11,score12,score13,score14,score15,score16,score17,score18,score19,score20,score21]
+        imgArray = [score1,score2,score3,score4,score5,score6,score7,score8,score9,score10,score11,score12,score13,score14,score15,score16,score17,score18,score19,score20,score21,score22,score23,score24,score25,score26,score27,score28,score29,score30,score31,score32,score33,score34,score35,score36,score37,score38,score39,score40,score41,score42,score43,score44,score45,score46,score47,score48,score49,score50,score51]
         
         //回答イラストの配列
         answerArray =
@@ -286,7 +322,7 @@ class QuizViewController: UIViewController {
     func nextQuiz() {
         
         //問題画像の配列
-        imgArray = [score1,score2,score3,score4,score5,score6,score7,score8,score9,score10,score11,score12,score13,score14,score15,score16,score17,score18,score19,score20,score21]
+        imgArray = [score1,score2,score3,score4,score5,score6,score7,score8,score9,score10,score11,score12,score13,score14,score15,score16,score17,score18,score19,score20,score21,score22,score23,score24,score25,score26,score27,score28,score29,score30,score31,score32,score33,score34,score35,score36,score37,score38,score39,score40,score41,score42,score43,score44,score45,score46,score47,score48,score49,score50,score51]
         
         //回答イラストの配列
         answerArray =
